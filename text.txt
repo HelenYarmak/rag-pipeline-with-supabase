@@ -1,0 +1,34 @@
+Service fees help Airbnb support hosts and cover the cost of things like payment processing, marketing, and customer service. 
+
+They’re a percentage of your nightly price plus any fees you’ve added, like a cleaning fee. Service fees are deducted from your price to calculate your payout. There are 2 types of fee structures on Airbnb: split fee and single fee.
+
+Split fee
+Hosts and guests each pay their own service fees. A 3% host fee is deducted from your price to calculate your payout.* In addition, guests pay a 14.1% to 16.5% service fee on top of your price. This means you set one price but guests see and pay another. For example, if you set your price at $100 USD, you earn $97 and your guests pay about $115.
+
+Single fee
+A single service fee is deducted from your price to calculate your payout. It’s typically 14 to 16%.** This means you set the price guests see and pay. For example, with a 15.5% single fee, if you set your price at $115, you earn $97.18 and your guests pay $115.
+
+The single fee is required for traditional hospitality listings, including most hotel listings and serviced apartments. Most hosts who use property management or channel management software are also on a single fee.
+
+Why does Airbnb charge service fees?
+Service fees help Airbnb run smoothly and support hosts. They cover the cost of things like:
+
+Processing guest payments
+Marketing listings to guests
+24/7 customer support
+Where do I find the service fee?
+Open any booking on your calendar, or any transaction in your earnings dashboard, to see a price breakdown. You’ll find the service fee on its own line.
+
+Learn more about service fees on the Help Center, which has articles on:
+
+Airbnb service fees
+Value Added Tax (VAT)
+Airbnb Experiences and Airbnb Services
+Service fee refunds for guests
+*Some pay more, including some hosts with listings in Italy and Brazil.
+
+**Hosts with super strict cancellation policies may pay a higher fee.
+
+In some countries and regions, taxes are included in the total price displayed. The total price including taxes is always displayed prior to checkout.
+
+Information contained in this article may have changed since publication.
