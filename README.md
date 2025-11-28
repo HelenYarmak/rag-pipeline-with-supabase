@@ -68,7 +68,7 @@ For chunking you should call ```ingestDocument('./text.txt')``` in ```ingest.js`
 
 2. **Embedding Generation**
 
-Creates vector embeddings and pushes them into Supabase.
+Creates vector embeddings.
 
 ```
 export async function createEmbedding(text) {
@@ -180,7 +180,7 @@ export async function chat(systemPrompt, userMessage) {
 
 What this step does:
 
-    1. Packages the retrieved text as system context.
-    2. Sends both context + user query to the LLM.
-    3.The model generates a natural-language answer.
-    4.The first choice returned is passed back to the user.
+1. Packages the retrieved text as system context.
+2. Sends both context + user query to the LLM.
+3. The model generates a natural-language answer.
+4. The first choice returned is passed back to the user.
