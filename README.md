@@ -50,7 +50,7 @@ SUPABASE_API_KEY=your_service_role_key
 
 ![alt text](./images/workflow.png)
 
-1. **Chunking**
+### 1. Chunking
 
 Splits documents into embeddings-friendly chunks. The core of chunking lay in 
 ```openai.service.js```
@@ -66,7 +66,7 @@ I tested the pipeline on Airbnb FAQ data contained in ```text.txt```, but you ca
 
 For chunking you should call ```ingestDocument('./text.txt')``` in ```ingest.js``` directly.
 
-2. **Embedding Generation**
+### 2. Embedding Generation
 
 Creates vector embeddings.
 
@@ -87,7 +87,7 @@ export async function createEmbeddings(texts) {
 
 ```
 
-3. **Vector Store — Supabase Setup**
+### 3. Vector Store — Supabase Setup
 
 Create your project in Supabase. In SQL Editor run code:
 
@@ -121,7 +121,7 @@ export async function insertEmbeddings(data) {
 }
 ```
 
-4. **Retrieval**
+### 4. Retrieval
 
 After that you can create semantic text matching function in SQL Editor. This SQL query performs a K-Nearest Neighbors (KNN) similarity search on stored embeddings. It compares each vector in ```airbnb_table.embedding``` against the ```query_embedding```, calculates a similarity score, and returns the most relevant results.
 
@@ -150,17 +150,23 @@ $$;
 ```
 
 How it works:
-    1. Compute the vector distance using the ```<=>``` operator (cosine or L2 distance depending on the index type).
-    2. Convert distance to similarity using:
+
+1. Compute the vector distance using the ```<=>``` operator (cosine or L2 distance depending on the index type).
+
+2. Convert distance to similarity using:
+    
 ```
 similarity = 1 - (embedding <=> query_embedding)
 ```
 Higher similarity → more relevant match.
-    3. Filter results above a similarity threshold to keep only meaningful matches.
-    4. Sort in descending order, returning the most similar chunks first.
-    5. Limit output to ```match_count``` top results.
 
-5. **RAG Response Generation**
+3. Filter results above a similarity threshold to keep only meaningful matches.
+
+4. Sort in descending order, returning the most similar chunks first.
+
+5. Limit output to ```match_count``` top results.
+
+### 5. RAG Response Generation
 
 Once the most relevant context is retrieved, the system generates an answer using a chat completion model.
 The function below sends a system prompt (context + instructions) and a user message to the LLM, then returns the model’s final response.
